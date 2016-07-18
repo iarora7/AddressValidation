@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Address Validation</title>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+<body ng-cloak class="w3-container">
+    <div ng-controller="mainCtrl">
+        <h3> New Address Entry</h3>
+        <form>
+            <label>Your name: </label>
+            <input type="text" ng-model="name" /> <br><br>
+            <label>Address Details: </label> <br><br>
+            <label>House: </label>
+            <input type="text" ng-model="house" /> <br><br>
+            <label>City: </label>
+            <input type="text" ng-model="city" /> <br><br>
+            <label>State: </label>
+            <input type="text" ng-model="state" /> <br><br>
+
+            <button ng-click = "submitAdd()">Submit</button>
+            <span style="color:darkgreen">{{ addressUpdate }}</span>
+        </form>
+        <br><hr><br>
+        <h3> Get Address</h3>
+        <form>
+            <label>Your name: </label>
+            <input type="text" ng-model="searchName" /> <br><br>
+
+            <button ng-click = "getAdd()">Submit</button>
+            <span style="color:darkgreen">{{ addressReturned }}</span>
+        </form>
+        <br><hr><br>
+    </div>
+
+    <div ng-controller="addressValidate">
+        <h3> Validate Address Entry</h3>
+        <form>
+            <label>Your name: </label>
+            <input type="text" ng-model="name1" /> <br><br>
+            <label>Address Details: </label> <br><br>
+            <label>House: </label>
+            <input type="text" ng-model="house1" /> <br><br>
+            <label>City: </label>
+            <input type="text" ng-model="city1" /> <br><br>
+            <label>State: </label>
+            <input type="text" ng-model="state1" /> <br><br>
+            <label>Postal: </label>
+            <input type="text" ng-model="postal1" /> <br><br>
+
+            <button ng-click = "validateAdd()">Submit</button>
+            <span style="color:darkgreen">{{ addressValid }}</span>
+        </form>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript" language="javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="x2js/xml2json.js"></script>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
