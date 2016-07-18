@@ -1,0 +1,1 @@
+create different Get, put and Post request for address
